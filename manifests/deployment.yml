@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gavaskaracihelloworld 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gavaskaracihelloworld 
+    spec:
+      containers:
+        - name: gavaskaracihelloworld 
+          image: aksdemoregistrygavaskar.azurecr.io/gavaskaracihelloworld
+          ports:
+          - containerPort: 80
